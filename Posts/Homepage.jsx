@@ -26,7 +26,7 @@ const Homepage = ({ isLoggedIn }) => {
 
   //  },[])
 
-  // console.log(userData);
+  // (userData);
 
   const data = [
     {
@@ -92,30 +92,30 @@ const Homepage = ({ isLoggedIn }) => {
       <herosection>
 
         <div className='border border-black h-[605px] flex justify-center items-center relative'>
-        <div class="relative bg-[url('https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png')] bg-cover bg-center h-[660px] w-full bg-no-repeat">
-    <div class="absolute inset-0 bg-[#00002C] bg-opacity-30"></div>
+          <div class="relative bg-[url('https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png')] bg-cover bg-center h-[660px] w-full bg-no-repeat">
+            <div class="absolute inset-0 bg-[#00002C] bg-opacity-30"></div>
 
-    <div class="hero_section text-white relative py-20">
-        <div class="wrapper mx-auto max-w-screen-xl px-6">
-            <div class="hero_content">
-                <div class="hero_text_container max-w-4xl">
+            <div class="hero_section text-white relative py-20">
+              <div class="wrapper mx-auto max-w-screen-xl px-6">
+                <div class="hero_content">
+                  <div class="hero_text_container max-w-4xl">
                     <h1 class="hero-heading text-white text-6xl md:text-5xl mt-20 lg:text-7xl font-light">Welcome to the professional event management.</h1>
 
                     <div class="hero-text">
-                        <p class="text-white text-4xl mt-12">Join us for a transformative experience.</p>
+                      <p class="text-white text-4xl mt-12">Join us for a transformative experience.</p>
                     </div>
-                </div>
-   <Link to={"/register"}>
-                <div class="button-box mt-12 flex justify-start">
-                    <button class="bg-[#880063] text-white py-3 px-6 rounded-lg text-lg"><a href="https://www.example.com/register">Register Now</a></button>
-                </div>
-   </Link>
+                  </div>
+                  <Link to={"/register"}>
+                    <div class="button-box mt-12 flex justify-start">
+                      <button class="bg-[#880063] text-white py-3 px-6 rounded-lg text-lg"><a href="https://www.example.com/register">Register Now</a></button>
+                    </div>
+                  </Link>
 
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-</div>
-  
+          </div>
+
           {/* <span className='absolute'>
             <input className=' px-4 py-3 w-[500px]  backdrop-blur-[1px] text-black rounded-xl border-2 border-orange-400 font-[sans-serif] focus:w-[600px] focus:outline-none focus:border-blue-600 transition-all duration-200 ease-linear' type="email" placeholder="Search events..." />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px" className="z-20 absolute right-4 font-bold size-5 top-4">
@@ -151,14 +151,14 @@ const Homepage = ({ isLoggedIn }) => {
                       className='hover:text-red-500 text-white block font-semibold text-[17px]'>Home</a>
                   </li>
                   <Link to={"/team"}>
-                  <li className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-                    className='hover:text-orange-500 text-white block font-semibold text-[17px]'>Team</a>
-                  </li>
+                    <li className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
+                      className='hover:text-orange-500 text-white block font-semibold text-[17px]'>Team</a>
+                    </li>
                   </Link>
                   <Link to={'/get_post'}>
-                  <li className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
-                    className='hover:text-orange-500 text-white block font-semibold text-[17px]'>Events</a>
-                  </li>
+                    <li className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
+                      className='hover:text-orange-500 text-white block font-semibold text-[17px]'>Events</a>
+                    </li>
                   </Link>
                   <li className='max-lg:border-b border-gray-300 max-lg:py-3 px-3'><a href='javascript:void(0)'
                     className='hover:text-orange-500 text-white block font-semibold text-[17px]'>About</a>
@@ -261,7 +261,7 @@ const Homepage = ({ isLoggedIn }) => {
         </div>
 
       </herosection>
-    
+
       <br />
 
       <div
@@ -269,8 +269,8 @@ const Homepage = ({ isLoggedIn }) => {
 
       </div>
 
-<br />
-<br />
+      <br />
+      <br />
       <section className=''>
 
 
@@ -305,74 +305,74 @@ const Homepage = ({ isLoggedIn }) => {
             </Slider>
           </div>
         </div>
-<br />
-<br />
+        <br />
+        <br />
         <div className="grid md:grid-cols-2 md:items-center gap-6 md:h-[400px] font-[sans-serif] max-w-4xl mx-auto relative px-4 md:mt-4 md:before:absolute md:before:right-0 md:before:w-[300px] md:before:rounded-md md:before:h-full md:before:bg-orange-100">
-      <div className="flex items-center">
-        <img
-          src="https://readymadeui.com/profile_3.webp"
-          alt="John Doe"
-          className="object-contain h-[150px] max-sm:h-32 rounded-md"
-        />
-        <div className="ml-6">
-          <div>
-            <h4 className="text-base font-semibold text-gray-800">Muthu kumar</h4>
-            <p className="text-xs text-gray-500 mt-0.5">Muthu@eventmanagemant.com</p>
+          <div className="flex items-center">
+            <img
+              src="https://readymadeui.com/profile_3.webp"
+              alt="John Doe"
+              className="object-contain h-[150px] max-sm:h-32 rounded-md"
+            />
+            <div className="ml-6">
+              <div>
+                <h4 className="text-base font-semibold text-gray-800">Muthu kumar</h4>
+                <p className="text-xs text-gray-500 mt-0.5">Muthu@eventmanagemant.com</p>
+              </div>
+
+              <div className="space-x-3 mt-6">
+                <a
+                  href="javascript:void(0)"
+                  className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14px"
+                    fill="#fff"
+                    viewBox="0 0 155.139 155.139"
+                  >
+                    <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
+                  </svg>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4] active:bg-[#03a9f4]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14px"
+                    fill="#fff"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
+                  </svg>
+                </a>
+                <a
+                  href="javascript:void(0)"
+                  className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5] active:bg-[#0077b5]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14px"
+                    fill="#fff"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div className="space-x-3 mt-6">
-            <a
-              href="javascript:void(0)"
-              className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14px"
-                fill="#fff"
-                viewBox="0 0 155.139 155.139"
-              >
-                <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
-              </svg>
-            </a>
-            <a
-              href="javascript:void(0)"
-              className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4] active:bg-[#03a9f4]"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14px"
-                fill="#fff"
-                viewBox="0 0 512 512"
-              >
-                <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
-              </svg>
-            </a>
-            <a
-              href="javascript:void(0)"
-              className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5] active:bg-[#0077b5]"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14px"
-                fill="#fff"
-                viewBox="0 0 24 24"
-              >
-                <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0z" />
-              </svg>
-            </a>
+          <div className="relative">
+            <h2 className="text-gray-800 text-2xl font-semibold">
+              Prompt Delivery and Enjoyable Dining Experience.
+            </h2>
+            <p className="mt-6 text-sm text-gray-500">
+              The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.
+            </p>
           </div>
         </div>
-      </div>
-
-      <div className="relative">
-        <h2 className="text-gray-800 text-2xl font-semibold">
-          Prompt Delivery and Enjoyable Dining Experience.
-        </h2>
-        <p className="mt-6 text-sm text-gray-500">
-          The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.
-        </p>
-      </div>
-    </div>
 
 
 
@@ -384,7 +384,7 @@ const Homepage = ({ isLoggedIn }) => {
       <section className="p-8 bg-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="tile bg-white p-4 rounded-lg shadow-lg">
-            <img src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/78/c3/88/caption.jpg?w=1200&h=700&s=1&cx=2736&cy=1824&chk=v1_fa65978ad26491920728' className="tile__top bg-gray-300 h-48 mb-4"/>
+            <img src='https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/78/c3/88/caption.jpg?w=1200&h=700&s=1&cx=2736&cy=1824&chk=v1_fa65978ad26491920728' className="tile__top bg-gray-300 h-48 mb-4" />
             <h3 className="tile__title text-xl font-semibold text-gray-800">Expencive Hotals</h3>
             <p className="tile__content text-gray-600"> Luxury hotels, offer a high level of service, top-notch food, and an exceptional stay.</p>
             <div className="tile__btn-wrapper text-center mt-4">
@@ -401,13 +401,13 @@ const Homepage = ({ isLoggedIn }) => {
       <section className="p-8 bg-gray-100">
         <div className="flex flex-col md:flex-row items-center justify-center space-x-6">
           <div className="md:w-1/2">
-            <img src="https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png" alt="Placeholder" className="rounded-lg"/>
+            <img src="https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png" alt="Placeholder" className="rounded-lg" />
           </div>
           <div className="md:w-1/2">
             <h2 className="text-3xl text-purple-700 mb-4">Environmentally Secure Event Management</h2>
             <br />
             <p className="text-gray-700 mb-4">
-            services are designed to reduce environmental impact while ensuring smooth, secure, and successful events.
+              services are designed to reduce environmental impact while ensuring smooth, secure, and successful events.
             </p>
             <br />
             <a href="#cta2" className="bg-red-600 hover:bg-red-800 text-white py-2 px-6 rounded-md">
@@ -424,53 +424,53 @@ const Homepage = ({ isLoggedIn }) => {
         </svg>
       </div>
       <div className='-10'>
-          <div className='flex justify-center pt-4 '>
-            <h1 className="text-4xl font-bold mb-6 text-black">Most booking hotals</h1>
+        <div className='flex justify-center pt-4 '>
+          <h1 className="text-4xl font-bold mb-6 text-black">Most booking hotals</h1>
 
-          </div>
-
-          <div className='w-3/4 m-auto'>
-            <Slider {...settings}>
-              {
-                hotal.map((item, index) => {
-                  return (
-                    <div key={index} className=''>
-                      <div>
-                        <img src={item.image} className='object-contain block m-auto b-2 h-40 rounded-md pl-4' />
-                      </div>
-                      <br />
-                      <div className="flex justify-center space-x-1.5">
-      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-      </svg>
-      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-      </svg>
-      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-      </svg>
-      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-      </svg>
-      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
-      </svg>
-    </div>
-                      <div className='p-6 '>
-                        <p className='font-semibold text-black text-center'>{item.title}</p>
-                      </div>
-                      <div className='flex justify-center'>
-                        <Link to={"/get_post"}>
-                          <button className='bg-orange-500 text-white rounded-md h-10 w-20'>Book</button>
-                        </Link>
-                      </div>
-                    </div>
-                  )
-                })
-              }
-            </Slider>
-          </div>
         </div>
+
+        <div className='w-3/4 m-auto'>
+          <Slider {...settings}>
+            {
+              hotal.map((item, index) => {
+                return (
+                  <div key={index} className=''>
+                    <div>
+                      <img src={item.image} className='object-contain block m-auto b-2 h-40 rounded-md pl-4' />
+                    </div>
+                    <br />
+                    <div className="flex justify-center space-x-1.5">
+                      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
+                      </svg>
+                    </div>
+                    <div className='p-6 '>
+                      <p className='font-semibold text-black text-center'>{item.title}</p>
+                    </div>
+                    <div className='flex justify-center'>
+                      <Link to={"/get_post"}>
+                        <button className='bg-orange-500 text-white rounded-md h-10 w-20'>Book</button>
+                      </Link>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </Slider>
+        </div>
+      </div>
 
 
 
@@ -581,56 +581,56 @@ const Homepage = ({ isLoggedIn }) => {
             <div className="mt-6">
               <p className="text-gray-600 leading-relaxed text-sm">"Transforming your vision into reality, we specialize in creating unforgettable events tailored to perfection. From weddings to corporate gatherings, our dedicated team ensures every detail is flawlessly executed. Let’s make your next event extraordinary. Contact us today!"
 
-Would you like me to include social media links, a call-to-action, or other specific details?.</p>
+                Would you like me to include social media links, a call-to-action, or other specific details?.</p>
             </div>
             <ul className="mt-10 flex space-x-5">
-      <li>
-        <a href="javascript:void(0)">
-          <svg xmlns="http://www.w3.org/2000/svg" className="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
-            <path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56z" />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 112.196 112.196">
-            <circle cx="56.098" cy="56.097" r="56.098" fill="#007ab9" />
-            <path fill="#fff" d="M89.616 60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118-3.705 0-5.906 2.491-6.878 4.903-.353.862-.444 2.059-.444 3.268v22.524h-13.41s.18-36.546 0-40.329h13.411v5.715c-.027.045-.065.089-.089.132h.089v-.132c1.782-2.742 4.96-6.662 12.085-6.662 8.822 0 15.436 5.764 15.436 18.149zm-54.96-36.642c-4.587 0-7.588 3.011-7.588 6.967 0 3.872 2.914 6.97 7.412 6.97h.087c4.677 0 7.585-3.098 7.585-6.97-.089-3.956-2.908-6.967-7.496-6.967zm-6.791 59.77H41.27v-40.33H27.865v40.33z" />
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 152 152">
-            <linearGradient id="a" x1="22.26" x2="129.74" y1="22.26" y2="129.74" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="#fae100" />
-              <stop offset=".15" stopColor="#fcb720" />
-              <stop offset=".3" stopColor="#ff7950" />
-              <stop offset=".5" stopColor="#ff1c74" />
-              <stop offset="1" stopColor="#6c1cd1" />
-            </linearGradient>
-            <g data-name="Layer 2">
-              <g data-name="03.Instagram">
-                <rect width="152" height="152" fill="url(#a)" rx="76" />
-                <g fill="#fff">
-                  <path fill="#ffffff10" d="M133.2 26c-11.08 20.34-26.75 41.32-46.33 60.9S46.31 122.12 26 133.2q-1.91-1.66-3.71-3.46A76 76 0 1 1 129.74 22.26q1.8 1.8 3.46 3.74z" />
-                  <path d="M94 36H58a22 22 0 0 0-22 22v36a22 22 0 0 0 22 22h36a22 22 0 0 0 22-22V58a22 22 0 0 0-22-22zm15 54.84A18.16 18.16 0 0 1 90.84 109H61.16A18.16 18.16 0 0 1 43 90.84V61.16A18.16 18.16 0 0 1 61.16 43h29.68A18.16 18.16 0 0 1 109 61.16z" />
-                  <path d="m90.59 61.56-.19-.19-.16-.16A20.16 20.16 0 0 0 76 55.33 20.52 20.52 0 0 0 55.62 76a20.75 20.75 0 0 0 6 14.61 20.19 20.19 0 0 0 14.42 6 20.73 20.73 0 0 0 14.55-35.05zM76 89.56A13.56 13.56 0 1 1 89.37 76 13.46 13.46 0 0 1 76 89.56zm26.43-35.18a4.88 4.88 0 0 1-4.85 4.92 4.81 4.81 0 0 1-3.42-1.43 4.93 4.93 0 0 1 3.43-8.39 4.82 4.82 0 0 1 3.09 1.12l.1.1a3.05 3.05 0 0 1 .44.44l.11.12a4.92 4.92 0 0 1 1.1 3.12z" />
-                </g>
-              </g>
-            </g>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 1227 1227">
-            <path d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z" />
-            <path fill="#fff" d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z" />
-          </svg>
-        </a>
-      </li>
-    </ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="fill-blue-600 w-8 h-8" viewBox="0 0 49.652 49.652">
+                    <path d="M24.826 0C11.137 0 0 11.137 0 24.826c0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826C49.652 11.137 38.516 0 24.826 0zM31 25.7h-4.039v14.396h-5.985V25.7h-2.845v-5.088h2.845v-3.291c0-2.357 1.12-6.04 6.04-6.04l4.435.017v4.939h-3.219c-.524 0-1.269.262-1.269 1.386v2.99h4.56z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 112.196 112.196">
+                    <circle cx="56.098" cy="56.097" r="56.098" fill="#007ab9" />
+                    <path fill="#fff" d="M89.616 60.611v23.128H76.207V62.161c0-5.418-1.936-9.118-6.791-9.118-3.705 0-5.906 2.491-6.878 4.903-.353.862-.444 2.059-.444 3.268v22.524h-13.41s.18-36.546 0-40.329h13.411v5.715c-.027.045-.065.089-.089.132h.089v-.132c1.782-2.742 4.96-6.662 12.085-6.662 8.822 0 15.436 5.764 15.436 18.149zm-54.96-36.642c-4.587 0-7.588 3.011-7.588 6.967 0 3.872 2.914 6.97 7.412 6.97h.087c4.677 0 7.585-3.098 7.585-6.97-.089-3.956-2.908-6.967-7.496-6.967zm-6.791 59.77H41.27v-40.33H27.865v40.33z" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 152 152">
+                    <linearGradient id="a" x1="22.26" x2="129.74" y1="22.26" y2="129.74" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stopColor="#fae100" />
+                      <stop offset=".15" stopColor="#fcb720" />
+                      <stop offset=".3" stopColor="#ff7950" />
+                      <stop offset=".5" stopColor="#ff1c74" />
+                      <stop offset="1" stopColor="#6c1cd1" />
+                    </linearGradient>
+                    <g data-name="Layer 2">
+                      <g data-name="03.Instagram">
+                        <rect width="152" height="152" fill="url(#a)" rx="76" />
+                        <g fill="#fff">
+                          <path fill="#ffffff10" d="M133.2 26c-11.08 20.34-26.75 41.32-46.33 60.9S46.31 122.12 26 133.2q-1.91-1.66-3.71-3.46A76 76 0 1 1 129.74 22.26q1.8 1.8 3.46 3.74z" />
+                          <path d="M94 36H58a22 22 0 0 0-22 22v36a22 22 0 0 0 22 22h36a22 22 0 0 0 22-22V58a22 22 0 0 0-22-22zm15 54.84A18.16 18.16 0 0 1 90.84 109H61.16A18.16 18.16 0 0 1 43 90.84V61.16A18.16 18.16 0 0 1 61.16 43h29.68A18.16 18.16 0 0 1 109 61.16z" />
+                          <path d="m90.59 61.56-.19-.19-.16-.16A20.16 20.16 0 0 0 76 55.33 20.52 20.52 0 0 0 55.62 76a20.75 20.75 0 0 0 6 14.61 20.19 20.19 0 0 0 14.42 6 20.73 20.73 0 0 0 14.55-35.05zM76 89.56A13.56 13.56 0 1 1 89.37 76 13.46 13.46 0 0 1 76 89.56zm26.43-35.18a4.88 4.88 0 0 1-4.85 4.92 4.81 4.81 0 0 1-3.42-1.43 4.93 4.93 0 0 1 3.43-8.39 4.82 4.82 0 0 1 3.09 1.12l.1.1a3.05 3.05 0 0 1 .44.44l.11.12a4.92 4.92 0 0 1 1.1 3.12z" />
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 1227 1227">
+                    <path d="M613.5 0C274.685 0 0 274.685 0 613.5S274.685 1227 613.5 1227 1227 952.315 1227 613.5 952.315 0 613.5 0z" />
+                    <path fill="#fff" d="m680.617 557.98 262.632-305.288h-62.235L652.97 517.77 470.833 252.692H260.759l275.427 400.844-275.427 320.142h62.239l240.82-279.931 192.35 279.931h210.074L680.601 557.98zM345.423 299.545h95.595l440.024 629.411h-95.595z" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div className="max-lg:min-w-[140px]">

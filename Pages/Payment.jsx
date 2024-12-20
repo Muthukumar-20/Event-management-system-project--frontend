@@ -7,8 +7,8 @@ const Payment = ({ userData }) => {
 
   const { _id } = useParams()
   const { totalprice } = useParams()
-const {datepost}=useParams()
-  const {ticketquantity} =useParams()
+  const { datepost } = useParams()
+  const { ticketquantity } = useParams()
 
 
   const navigate = useNavigate();
@@ -28,25 +28,25 @@ const {datepost}=useParams()
   const [error, setError] = useState(''); // To handle errors
   const [success, setSuccess] = useState(''); // To show success message
   const [quantity, setQuantity] = useState()
- const [totalPrice, setTotalPrice] = useState(totalprice);
+  const [totalPrice, setTotalPrice] = useState(totalprice);
   const [updatePrice, setUpdatePrice] = useState('');
   const [buttonText, setButtonText] = useState("Select booking tickets")
 
-// const apply =document.getElementsByClassName("apply")
-// const element = document.getElementById("myBtn");
+  // const apply =document.getElementsByClassName("apply")
+  // const element = document.getElementById("myBtn");
 
-// element.addEventListener("click", myFunction);
+  // element.addEventListener("click", myFunction);
 
-// function myFunction() {
-//   document.getElementById("Promo code")
-//   alert("Invalid promo code")
-// }
+  // function myFunction() {
+  //   document.getElementById("Promo code")
+  //   alert("Invalid promo code")
+  // }
 
 
   useEffect(() => {
     const fetchEventDetails = async () => {
       try {
-        const res = await api.post('/booking/postDetails', { _id });   
+        const res = await api.post('/booking/postDetails', { _id });
       } catch (error) {
         console.error("Error fetching event details:", error);
       }
@@ -55,9 +55,9 @@ const {datepost}=useParams()
     fetchEventDetails();
   }, [_id]);
 
-    useEffect(() => {
-      console.log(userData);
-    }, [userData])
+  useEffect(() => {
+    (userData);
+  }, [userData])
 
 
   // Handle form submission
@@ -81,13 +81,13 @@ const {datepost}=useParams()
         }
       );
       setTimeout(() => {
-      navigate("/get_post")
-      },1200)
+        navigate("/get_post")
+      }, 1200)
       toast.success("Bookingticket successfully sending your email");
     } catch (err) {
       // toast.error(err.response.message);
-      console.log(err);
-      
+      (err);
+
     } finally {
       setLoading(false);
     }

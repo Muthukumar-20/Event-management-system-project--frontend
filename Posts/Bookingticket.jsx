@@ -120,7 +120,7 @@ const Bookingticket = ({ userData }) => {
   };
 
 
-  console.log(res);
+  (res);
 
   useEffect(() => {
     setGeneralTotalPrice(setTotalPrice(res.data.findDetails.generalprice * ticketQuantity));
@@ -193,7 +193,7 @@ const Bookingticket = ({ userData }) => {
     }
   }, [ticketType, ticketQuantity, postDetails]);
 
-  console.log(date);
+  (date);
 
 
   const handleDropdownChange = (ticket) => {

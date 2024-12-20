@@ -40,7 +40,7 @@ const Home = ({ userData }) => {
     { name: 'Event D', Attendance: 2780, Revenue: 3908, Satisfaction: 60 },
   ];
   useEffect(() => {
-    console.log(userData);
+    (userData);
   }, [userData])
 
   useEffect(() => {
