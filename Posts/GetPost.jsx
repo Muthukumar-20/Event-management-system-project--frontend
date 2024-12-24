@@ -83,7 +83,6 @@ const Event = ({ posterDetail, posterId }) => {
                     <div className="flex justify-between">
                       <p className="text-orange-500 text-[13px] font-semibold mt-4">{Event.date}</p>
                       <p className="mt-4 text-green-500 text-[15px]">₹{Event.generalprice}</p>
-                    </div>
                     {isLoggedIn() ? (
                       <Link to={`/ticketbooking/${Event._id}`}>
                         <div className="flex justify-center">
