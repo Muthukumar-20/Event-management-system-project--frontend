@@ -5,11 +5,12 @@ import { UserDetailsContext } from '../src/App';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import api from '../Services/localStorage';
-
 import { TextField } from '@mui/material';
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+
 
 
 const Home = ({ userData }) => {
@@ -18,6 +19,7 @@ const Home = ({ userData }) => {
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [posts, setPosts] = useState([]);
   const [generalprice, setgeneralprice] = useState();
   const [vipprice, setvipprice] = useState();
   const [location, setLocation] = useState("");
@@ -39,6 +41,7 @@ const Home = ({ userData }) => {
     { name: 'Event C', Attendance: 2000, Revenue: 9800, Satisfaction: 85 },
     { name: 'Event D', Attendance: 2780, Revenue: 3908, Satisfaction: 60 },
   ];
+
   useEffect(() => {
     (userData);
   }, [userData])
@@ -90,7 +93,6 @@ const Home = ({ userData }) => {
   });
 
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!title || !description || !image || !date || !time || !generalprice || !vipprice || !location) {
@@ -134,8 +136,43 @@ const Home = ({ userData }) => {
   };
 
 
+  const fetchUnapprovedPosts = async () => {
+    try {
+      const response = await api.get("/posts/unapprovedpost");
+      setPosts(response.data.posts);
+    } catch (error) {
+      setError(error.response.data.message);
+    }
+  }
+  
+  const approveEvent = async (id) => {
+    try {
+      const response = await api.patch(`/posts/${id}/approve`);
+      setPosts(posts.filter((post) => post._id !== id));
+      toast.success(response.data.message);
+      navigate("/");
+      
+    } catch (error) {
+      setError(error.response.data.message);
+      toast.error(error.response.data.message);
+    }
+  }
+  
+  const rejectEvent = async (id) => {
+    try {
+      const response = await api.delete(`/posts/delete/${id}`);
+      setPosts(posts.filter((post) => post._id !== id));
+      toast.success(response.data.message);
+      
+    } catch (error) {
+      setError(error.response.data.message);
+      toast.error(error.response.data.message);
+    }
+  }
 
-
+  useEffect(()=>{
+    fetchUnapprovedPosts();
+  },[])
 
 
 
@@ -350,8 +387,9 @@ const Home = ({ userData }) => {
                       </a>
                     </li>
                     <li>
-                      <a href="javascript:void(0)"
-                        class="text-gray-800 text-sm flex items-center hover:bg-gray-100 rounded-md px-4 py-2 transition-all">
+                      <li href="javascript:void(0)"
+                        className={`text-gray-800 text-sm flex items-center hover:bg-gray-100 rounded-md px-4 py-2 transition-all ${ activeTab === 'admin' ? 'bg-[#d9f3ea] text-green-700' : 'text-gray-600 font-semibold'
+                          }`} onClick={() => handleTabClick('admin')} >
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-[18px] h-[18px] mr-3"
                           viewBox="0 0 512.003 512.003">
                           <path
@@ -361,8 +399,8 @@ const Home = ({ userData }) => {
                             d="M339.485 170.845c-6.525-6.525-17.106-6.525-23.632 0L159.887 326.811c-6.525 6.525-6.525 17.106.001 23.632 3.263 3.263 7.54 4.895 11.816 4.895s8.554-1.632 11.816-4.895l155.966-155.967c6.526-6.524 6.526-17.105-.001-23.631zm-151.071-4.895c-18.429 0-33.421 14.993-33.421 33.421 0 18.429 14.994 33.421 33.421 33.421 18.429 0 33.421-14.993 33.421-33.421.001-18.428-14.992-33.421-33.421-33.421zm122.545 122.545c-18.429 0-33.421 14.993-33.421 33.421 0 18.429 14.993 33.421 33.421 33.421s33.421-14.993 33.421-33.421c.001-18.428-14.992-33.421-33.421-33.421z"
                             data-original="#000000" />
                         </svg>
-                        <span>Promote</span>
-                      </a>
+                        <span>Admin</span>
+                      </li>
                     </li>
                   </ul>
                 </div>
@@ -597,11 +635,6 @@ const Home = ({ userData }) => {
                       </div>
                     </div>
                   </div>
-
-
-
-
-
                   <form onSubmit={handleSubmit} className="bg-white absolute w-[1000px] top-16 shadow-md rounded p-8">
                     <h2 className="text-2xl font-bold mb-4 text-center">
                       Create A Events
@@ -737,9 +770,62 @@ const Home = ({ userData }) => {
                     </button>
                   </form>
                 </div>
+              
+
+                <div id='adminContent' className={` ${activeTab === 'admin' ? 'block' : 'hidden'}`}> 
+              <div className="container mx-auto mt-8">
+      <h1 className="text-3xl text-center font-bold underline">Admin Panel</h1>
+      {error && (
+          <div className="bg-red-100 p-3 mb-4 text-red-600 rounded">
+            {error}
+          </div>
+        )}
+        <div className="absolute grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 cursor-pointer">
+          {posts.map((Event)=>{
+            return(
+              <div
+              key={Event._id}
+              className="bg-white p-4 shadow rounded  relative border tranform transition-transform duration-300 hover:scale-105"
+            >
+              <img
+                src={Event.image}
+                alt={Event.title}
+                className="w-full h-48 object-contain mb-4"
+              />
+              <h2 className="text-lg font-semibold">{Event.title}</h2>
+              <p className=" font-bold">Author: {Event.user.name}</p>
+              <p className="text-gray-500">{Event.description}</p>
+              <p className="text-gray-500">{Event.date}</p>
+              <p className="text-gray-500">{Event.time}</p>
+              <p className="text-gray-500">{Event.location}</p>
+              <p className="text-gray-500">{Event.price}</p>
+              <div className="mt-4">
+                   <button 
+                   onClick={()=>approveEvent(Event._id)}
+                   className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 mr-2"
+                   >Approve</button>
+                   <button
+                   onClick={()=>rejectEvent(Event._id)}
+                   className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                   >
+                    Reject
+                   </button>
+              </div>
+            </div>
+            )
+          })}
+        </div>
+    </div>
 
 
               </div>
+
+            
+              </div>
+
+           
+
+
             </section>
 
 
