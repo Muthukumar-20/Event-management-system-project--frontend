@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Desboard from '../Pages/Desboard';
 import Register from '../Pages/Register';
 import Login from '../Pages/Login';
-import Admin from '../Pages/Admin';
 import GetPost from '../Posts/GetPost';
 import Bookingticket from '../Posts/Bookingticket';
 import Payment from '../Pages/Payment';
@@ -65,7 +64,7 @@ const App = () => {
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={
                         <Login userDetails={userDetails} setIsLoggedIn={setIsLoggedIn} />} />
-                    <Route path='/admin' element={<Admin />} />
+                
                   
                     <Route path='/team' element={<Team />} />
                     <Route path='/get_post' element={

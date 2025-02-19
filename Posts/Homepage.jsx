@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from '@ant-design/react-slick';
-import { UserDetailsContext } from '../src/App';
+import { UserDetailsContext } from '../src/App'
+import { Link as ScrollLink  } from "react-scroll";
 import App from '../src/App';
 
 
@@ -74,7 +75,7 @@ const Homepage = ({ isLoggedIn }) => {
       <herosection>
 
         <div className='border border-black h-[605px] flex justify-center items-center relative'>
-          <div class="relative bg-[url('https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png')] bg-cover bg-center h-[660px] w-full bg-no-repeat">
+          <div class="relative bg-[url('https://22034068.fs1.hubspotusercontent-na1.net/hubfs/22034068/raw_assets/public/apex-theme/images/backgrounds/apex-home-hero.png')] bg-cover bg-center h-[700px] w-full bg-no-repeat">
             <div class="absolute inset-0 bg-[#00002C] bg-opacity-30"></div>
 
             <div class="hero_section text-white relative py-20">
@@ -247,7 +248,7 @@ const Homepage = ({ isLoggedIn }) => {
       <section className=''>
 
 
-        <div className='-10'>
+        <section className='animate-fade-in' id="events">
           <div className='flex justify-center pt-4 '>
             <h1 className="text-4xl font-bold mb-6 text-black">Upcoming Events</h1>
 
@@ -277,7 +278,7 @@ const Homepage = ({ isLoggedIn }) => {
               }
             </Slider>
           </div>
-        </div>
+        </section>
         <br />
         <br />
         <div className="grid md:grid-cols-2 md:items-center gap-6 md:h-[400px] font-[sans-serif] max-w-4xl mx-auto relative px-4 md:mt-4 md:before:absolute md:before:right-0 md:before:w-[300px] md:before:rounded-md md:before:h-full md:before:bg-orange-100">
@@ -294,8 +295,9 @@ const Homepage = ({ isLoggedIn }) => {
               </div>
 
               <div className="space-x-3 mt-6">
+              <a src="/">
                 <a
-                  href="javascript:void(0)"
+                  href="https://www.facebook.com/profile.php?id=100055713531318"
                   className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-blue-600 hover:bg-blue-700 active:bg-blue-600"
                 >
                   <svg
@@ -306,22 +308,23 @@ const Homepage = ({ isLoggedIn }) => {
                   >
                     <path d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761h28.48z" />
                   </svg>
+                  </a>
                 </a>
                 <a
-                  href="javascript:void(0)"
-                  className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#03a9f4] hover:bg-[#03a1f4] active:bg-[#03a9f4]"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14px"
-                    fill="#fff"
-                    viewBox="0 0 512 512"
-                  >
-                    <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" />
-                  </svg>
-                </a>
+  href="https://github.com/muthu-kumar-developer"
+  className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-black hover:bg-black active:bg-black"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="14px"
+    fill="#fff"
+    viewBox="0 0 24 24"
+  >
+    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+  </svg>
+</a>
                 <a
-                  href="javascript:void(0)"
+                  href="https://www.linkedin.com/in/muthu-kumar-developer/"
                   className="w-7 h-7 inline-flex items-center justify-center rounded-full border-none outline-none bg-[#0077b5] hover:bg-[#0055b5] active:bg-[#0077b5]"
                 >
                   <svg
@@ -361,9 +364,14 @@ const Homepage = ({ isLoggedIn }) => {
             <h3 className="tile__title text-xl font-semibold text-gray-800">Expencive Hotals</h3>
             <p className="tile__content text-gray-600"> Luxury hotels, offer a high level of service, top-notch food, and an exceptional stay.</p>
             <div className="tile__btn-wrapper text-center mt-4">
-              <a href="#tile1" className="bg-purple-600 hover:bg-purple-800 text-white py-2 px-4 rounded-md">
+            <ScrollLink
+          to="events"
+          smooth={true}
+          offset={-100}
+          duration={500}
+            className="bg-purple-600 hover:bg-purple-800 cursor-pointer text-white py-2 px-4 rounded-md">
                 Learn More
-              </a>
+              </ScrollLink>
             </div>
           </div>
           {/* Add more tiles similarly */}
@@ -383,9 +391,13 @@ const Homepage = ({ isLoggedIn }) => {
               services are designed to reduce environmental impact while ensuring smooth, secure, and successful events.
             </p>
             <br />
-            <a href="#cta2" className="bg-red-600 hover:bg-red-800 text-white py-2 px-6 rounded-md">
+            <ScrollLink 
+          to="hotals"
+          smooth={true}
+          offset={-100}
+          duration={500} className="bg-red-600 hover:bg-red-800 cursor-pointer  transition-all text-white py-2 px-6 rounded-md">
               Call to Action
-            </a>
+            </ScrollLink >
           </div>
         </div>
       </section>
@@ -407,7 +419,7 @@ const Homepage = ({ isLoggedIn }) => {
             {
               hotal.map((item, index) => {
                 return (
-                  <div key={index} className=''>
+                  <section key={index} id="hotals" className=''>
                     <div>
                       <img src={item.image} className='object-contain block m-auto b-2 h-40 rounded-md pl-4' />
                     </div>
@@ -422,10 +434,10 @@ const Homepage = ({ isLoggedIn }) => {
                       <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
                       </svg>
-                      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
                       </svg>
-                      <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
                       </svg>
                     </div>
@@ -437,7 +449,7 @@ const Homepage = ({ isLoggedIn }) => {
                         <button className='bg-orange-500 text-white rounded-md h-10 w-20'>Book</button>
                       </Link>
                     </div>
-                  </div>
+                  </section>
                 )
               })
             }

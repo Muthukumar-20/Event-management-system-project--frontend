@@ -93,12 +93,15 @@ const Event = ({ posterDetail, posterId }) => {
                       </Link>
                     ) : (
                       <div className="flex justify-center">
+                        <Link to={"/login"}>
                         <button className="h-10 w-28 bg-gray-600 text-white rounded-md" disabled>
                           Login to Book
                         </button>
+                        </Link>
                       </div>
                     )}
                   </div>
+                </div>
                 </div>
               </span>
             ))}
